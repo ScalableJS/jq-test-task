@@ -8,6 +8,8 @@ body {
   flex-direction: column;
   margin: 0;
   min-width: 400px;
+  /* avoid blinking content */
+  visibility: hidden;
 
   > footer {
     flex-shrink: 0;

@@ -1,3 +1,7 @@
+// emergency open content
+setTimeout(function() {
+  // document.body.style.visibility = 'visible';
+}, 1E3);
 /***
  * Watch when object is changed
  * @param key {string}
@@ -102,5 +106,6 @@ watch('$').then(($) => {
     }
   });
 
-
+  // show content after dom manipulation
+  $('body').css('visibility', 'visible');
 });

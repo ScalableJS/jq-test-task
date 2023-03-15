@@ -6,7 +6,9 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  min-width: 400px; }
+  min-width: 400px;
+  /* avoid blinking content */
+  visibility: hidden; }
   body > footer {
     flex-shrink: 0;
     background: #000; }
