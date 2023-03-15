@@ -1,9 +1,9 @@
 # Web Developer Test
 
-![Mobile](./screenshots/mobile.jpeg)
+![Mobile](https://github.com/ScalableJS/jq-test-task/blob/static-page/screenshots/mobile.png)
 
 
-![Desktop](./screenshots/desktop.png)
+![Desktop](https://github.com/ScalableJS/jq-test-task/blob/static-page/screenshots/desktop.png)
 
 ### Task description
 Reference the file "concept.jpg".  This is what index.html should look like when completed and viewed in browser.
