@@ -1,6 +1,9 @@
+// avoid blinking content
+document.body.style.visibility = 'hidden';
+
 // emergency open content
 setTimeout(function() {
-  // document.body.style.visibility = 'visible';
+  document.body.style.visibility = 'visible';
 }, 1E3);
 /***
  * Watch when object is changed
