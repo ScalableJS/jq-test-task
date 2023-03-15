@@ -266,6 +266,10 @@ img {
 
 .section-content {
   position: relative;
+
+  > a:hover {
+    font-weight: bold;
+  }
 }
 
 footer {

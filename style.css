@@ -187,6 +187,8 @@ img {
 
 .section-content {
   position: relative; }
+  .section-content > a:hover {
+    font-weight: bold; }
 
 footer {
   color: #FFF; }
