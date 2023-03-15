@@ -1,29 +1,27 @@
 // avoid blinking content
-document.body.style.visibility = 'hidden';
+document.body.classList.add('mm-hidden');
 
 // emergency open content
 setTimeout(function() {
-  document.body.style.visibility = 'visible';
+  document.body.classList.remove('mm-hidden');
 }, 1E3);
 /***
- * Watch when object is changed
+ * Watch when object is changed. ie11 compatibility
  * @param key {string}
  * @param context {Object}
- * @returns {Promise<unknown>}
+ * @param callback {Function}
  */
-const watch = function(key, context = window) {
+const watch = function(key, context = window, callback) {
   let savedValue;
-  return new Promise((resolve) => {
-    Object.defineProperty(context, key, {
-      configurable: true,
-      get: function() {
-        return savedValue;
-      },
-      set: function(value) {
-        savedValue = value;
-        resolve(value);
-      },
-    });
+  Object.defineProperty(context, key, {
+    configurable: true,
+    get: function() {
+      return savedValue;
+    },
+    set: function(value) {
+      savedValue = value;
+      callback(value);
+    },
   });
 };
 
@@ -40,7 +38,12 @@ const addScript = function(src) {
 addScript('./jquery.min.js');
 
 // wait when jq will be loaded. The logic can be changed when we use AMD model or client have jq on site above our script
-watch('$').then(($) => {
+watch('$', window, function($) {
+  $('body')
+    .append('<meta name="viewport" content="width=device-width, initial-scale=1.0">')
+    // show content after dom manipulation
+    .removeClass('mm-hidden');
+
   const $mainSectionChildren = $('body > header + section:first')
     .addClass('main-section')
     .find('>section');
@@ -108,7 +111,4 @@ watch('$').then(($) => {
       $header.removeClass('header--sticky');
     }
   });
-
-  // show content after dom manipulation
-  $('body').css('visibility', 'visible');
 });

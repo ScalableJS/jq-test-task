@@ -1,3 +1,8 @@
+$headerHeight: 100px;
+
+.mm-hidden {
+  visibility: hidden !important; }
+
 html {
   height: 100%;
 }
@@ -22,15 +27,10 @@ body {
     position: absolute;
     z-index: 999;
     width: 100%;
+    background: #0003;
+    height: $headerHeight;
   }
-
-
 }
-
-
-
-
-
 
 .main-section {
   flex: 1 0 auto;
@@ -43,7 +43,7 @@ body {
   background-size: cover;
   min-height: 56.25vw;
   max-height: 700px;
-  padding-top: 100px;
+  padding-top: $headerHeight;
   position: relative;
 }
 
@@ -112,13 +112,14 @@ img {
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 3px;
+    margin-bottom: 10px;
 
     + {
       a {
-        position: absolute;
         color: #000;
-        right: 10px;
-        top: 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
       }
     }
   }
@@ -165,6 +166,7 @@ img {
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 3px;
+    margin-bottom: 10px;
 
     ~ {
       p {
@@ -176,10 +178,10 @@ img {
 
     + {
       a {
-        position: absolute;
         color: #000;
-        right: 0;
-        top: 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
       }
     }
   }
@@ -199,6 +201,7 @@ img {
   text-decoration: none;
   border-radius: 5px;
   overflow: hidden;
+
   &:hover > div {
     background: #0000;
   }
@@ -335,6 +338,7 @@ footer {
     a {
       border-radius: 5px;
     }
+
     a:hover {
       transform: scale(1.05);
       transition: transform .3s ease;
@@ -343,18 +347,33 @@ footer {
   .footer-content {
     flex-direction: row;
   }
+
+  .member-experiences-section h2 + a,
+  .member-benefit-section h2 + a {
+    position: absolute;
+    color: #000;
+    right: 20px;
+    top: 0;
+    width: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  body > header {
+    background: transparent;
+  }
+
   .homepage-poster {
     min-height: 0;
     height: 56.25vw;
     padding-top: 0;
   }
+
   .member-benefit-section {
     max-width: 1400px;
     margin: 60px auto 0 auto;
   }
+
   .member-experiences-section {
     max-width: 1400px;
     margin-left: auto;
@@ -366,11 +385,6 @@ footer {
       top: 50%;
       transform: translate(0, -50%);
     }
-  }
-  .header--sticky {
-    position: fixed;
-    background: #000;
-    transition: background .3s ease;
   }
 }
 
@@ -386,5 +400,11 @@ footer {
   .logo-wrapper {
     order: 0;
     flex-basis: auto;
+  }
+
+  .header--sticky {
+    position: fixed;
+    background: #000;
+    transition: background .3s ease;
   }
 }

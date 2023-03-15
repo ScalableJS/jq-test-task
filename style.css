@@ -1,3 +1,6 @@
+.mm-hidden {
+  visibility: hidden !important; }
+
 html {
   height: 100%; }
 
@@ -15,7 +18,9 @@ body {
   body > header {
     position: absolute;
     z-index: 999;
-    width: 100%; }
+    width: 100%;
+    background: #0003;
+    height: 100px; }
 
 .main-section {
   flex: 1 0 auto;
@@ -76,12 +81,13 @@ img {
     text-align: center;
     text-transform: uppercase;
     font-weight: normal;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    margin-bottom: 10px; }
     .member-benefit-section h2 + a {
-      position: absolute;
       color: #000;
-      right: 10px;
-      top: 0; }
+      display: inline-block;
+      width: 100%;
+      text-align: center; }
 
 .member-benefit-section__card {
   width: 350px;
@@ -115,16 +121,17 @@ img {
     text-align: center;
     text-transform: uppercase;
     font-weight: normal;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    margin-bottom: 10px; }
     .member-experiences-section h2 ~ p {
       text-align: center;
       padding-top: 5px;
       font-size: 18px; }
     .member-experiences-section h2 + a {
-      position: absolute;
       color: #000;
-      right: 0;
-      top: 0; }
+      display: inline-block;
+      width: 100%;
+      text-align: center; }
 
 .member-experiences-section__card {
   display: block;
@@ -239,8 +246,19 @@ footer {
     transition: transform .3s ease; }
 
   .footer-content {
-    flex-direction: row; } }
+    flex-direction: row; }
+
+  .member-experiences-section h2 + a,
+  .member-benefit-section h2 + a {
+    position: absolute;
+    color: #000;
+    right: 20px;
+    top: 0;
+    width: auto; } }
 @media only screen and (min-width: 768px) {
+  body > header {
+    background: transparent; }
+
   .homepage-poster {
     min-height: 0;
     height: 56.25vw;
@@ -258,12 +276,7 @@ footer {
   .homepage-poster__content > div {
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%); }
-
-  .header--sticky {
-    position: fixed;
-    background: #000;
-    transition: background .3s ease; } }
+    transform: translate(0, -50%); } }
 @media only screen and (min-width: 992px) {
   .resources-list {
     width: 250px;
@@ -275,6 +288,11 @@ footer {
 
   .logo-wrapper {
     order: 0;
-    flex-basis: auto; } }
+    flex-basis: auto; }
+
+  .header--sticky {
+    position: fixed;
+    background: #000;
+    transition: background .3s ease; } }
 
 /*# sourceMappingURL=style.css.map */
