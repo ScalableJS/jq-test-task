@@ -1,26 +1,42 @@
 html {
-  height: 100%; }
+  height: 100%;
+}
 
 body {
   height: 100%;
   display: flex;
   flex-direction: column;
   margin: 0;
-  min-width: 400px; }
-  body > footer {
+  min-width: 400px;
+
+  > footer {
     flex-shrink: 0;
-    background: #000; }
-    body > footer a:hover {
-      text-decoration: underline; }
-  body > header {
+    background: #000;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  > header {
     position: absolute;
     z-index: 999;
-    width: 100%; }
+    width: 100%;
+  }
+
+
+}
+
+
+
+
+
 
 .main-section {
   flex: 1 0 auto;
   display: flex;
-  flex-flow: column; }
+  flex-flow: column;
+}
 
 .homepage-poster {
   background: url("./beach.jpg") no-repeat 50% 50%;
@@ -28,26 +44,34 @@ body {
   min-height: 56.25vw;
   max-height: 700px;
   padding-top: 100px;
-  position: relative; }
+  position: relative;
+}
 
 .homepage-poster__content {
   height: 100%;
-  background: #0003; }
-  .homepage-poster__content > div {
+  background: #0003;
+
+  > div {
     text-align: center;
-    width: 100%; }
-  .homepage-poster__content h1 {
+    width: 100%;
+  }
+
+  h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
     color: #FFF;
     font-size: 40px;
     letter-spacing: 4px;
-    margin: 0; }
-  .homepage-poster__content p {
+    margin: 0;
+  }
+
+  p {
     color: #FFF;
-    font-size: 18px; }
-  .homepage-poster__content a {
+    font-size: 18px;
+  }
+
+  a {
     font-family: Arial, serif;
     text-transform: uppercase;
     text-decoration: none;
@@ -56,70 +80,105 @@ body {
     background: #F7BC26;
     letter-spacing: 2px;
     margin-top: 6px;
-    color: #2C373F; }
+    color: #2C373F;
+  }
+}
 
-header .logo {
-  margin: 24px 0 24px 24px;
-  width: 187px; }
-  header .logo a:hover img {
-    transform: scale(1.05);
-    transition: transform .3s ease; }
+header {
+  .logo {
+    margin: 24px 0 24px 24px;
+    width: 187px;
+
+    a:hover {
+      img {
+        transform: scale(1.05);
+        transition: transform .3s ease;
+      }
+    }
+  }
+}
 
 img {
-  width: 100%; }
+  width: 100%;
+}
 
 .member-benefit-section {
   border-bottom: 3px solid #F5EDE4;
-  padding-bottom: 96px; }
-  .member-benefit-section h2 {
+  padding-bottom: 96px;
+
+  h2 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-transform: uppercase;
     font-weight: normal;
-    letter-spacing: 3px; }
-    .member-benefit-section h2 + a {
-      position: absolute;
-      color: #000;
-      right: 10px;
-      top: 0; }
+    letter-spacing: 3px;
+
+    + {
+      a {
+        position: absolute;
+        color: #000;
+        right: 10px;
+        top: 0;
+      }
+    }
+  }
+}
 
 .member-benefit-section__card {
   width: 350px;
   display: block;
   text-align: center;
   color: #000;
-  text-decoration: none; }
-  .member-benefit-section__card img {
-    height: 210px; }
-  .member-benefit-section__card h3 {
+  text-decoration: none;
+
+  img {
+    height: 210px;
+  }
+
+  h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     margin-top: 14px;
-    margin-bottom: 10px; }
-  .member-benefit-section__card p {
+    margin-bottom: 10px;
+  }
+
+  p {
     padding-left: 11px;
     padding-right: 11px;
-    line-height: 1.4; }
+    line-height: 1.4;
+  }
+}
 
 .member-experiences-section {
-  order: 1;
-  margin-top: 68px;
-  padding-bottom: 84px; }
-  .member-experiences-section h2 {
+  h2 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-transform: uppercase;
     font-weight: normal;
-    letter-spacing: 3px; }
-    .member-experiences-section h2 ~ p {
-      text-align: center;
-      padding-top: 5px;
-      font-size: 18px; }
-    .member-experiences-section h2 + a {
-      position: absolute;
-      color: #000;
-      right: 0;
-      top: 0; }
+    letter-spacing: 3px;
+
+    ~ {
+      p {
+        text-align: center;
+        padding-top: 5px;
+        font-size: 18px;
+      }
+    }
+
+    + {
+      a {
+        position: absolute;
+        color: #000;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+
+  order: 1;
+  margin-top: 68px;
+  padding-bottom: 84px;
+}
 
 .member-experiences-section__card {
   display: block;
@@ -130,20 +189,25 @@ img {
   color: #FFF;
   text-decoration: none;
   border-radius: 5px;
-  overflow: hidden; }
-  .member-experiences-section__card > div {
+  overflow: hidden;
+
+  > div {
     width: 100%;
     height: 100%;
     background: #0003;
     padding: 22px;
-    box-sizing: border-box; }
-  .member-experiences-section__card h3 {
+    box-sizing: border-box;
+  }
+
+  h3 {
     font-weight: normal;
     text-transform: uppercase;
     font-size: 16px;
     margin-top: 14px;
-    letter-spacing: 0.5px; }
-  .member-experiences-section__card h4 {
+    letter-spacing: 0.5px;
+  }
+
+  h4 {
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-weight: normal;
@@ -151,60 +215,85 @@ img {
     font-size: 17px;
     line-height: 1.4;
     margin-top: 0;
-    width: 180px; }
-    .member-experiences-section__card h4 + span {
-      display: inline-block;
-      background: #F7BC26;
-      width: 72px;
-      border-radius: 20px;
-      text-align: center;
-      color: #000; }
-      .member-experiences-section__card h4 + span > p {
-        margin: 11px 0; }
+    width: 180px;
+
+    + {
+      span {
+        display: inline-block;
+        background: #F7BC26;
+        width: 72px;
+        border-radius: 20px;
+        text-align: center;
+        color: #000;
+
+        > p {
+          margin: 11px 0;
+        }
+      }
+    }
+  }
+}
 
 .member-benefit-section__card-list {
   display: flex;
   flex-wrap: wrap;
   gap: 35px;
   margin-top: 42px;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .member-experiences-section__card-list {
   display: flex;
   flex-wrap: wrap;
   gap: 35px;
   padding-top: 32px;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .section-content {
-  position: relative; }
+  position: relative;
+}
 
 footer {
-  color: #FFF; }
-  footer .logo {
+  color: #FFF;
+
+  .logo {
     width: 220px;
-    margin: 20px auto; }
-    footer .logo a:hover img {
-      transform: scale(1.05);
-      transition: transform .3s ease; }
-  footer h4 {
+    margin: 20px auto;
+
+    a:hover {
+      img {
+        transform: scale(1.05);
+        transition: transform .3s ease;
+      }
+    }
+  }
+
+  h4 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+  }
+}
 
 .footer-links {
   padding: 0;
-  margin: 0; }
-  .footer-links li {
-    display: block; }
-  .footer-links a {
+  margin: 0;
+
+  li {
+    display: block;
+  }
+
+  a {
     color: #FFF;
     text-decoration: none;
     line-height: 2.7;
     font-weight: bold;
     letter-spacing: 1px;
-    font-size: 15px; }
+    font-size: 15px;
+  }
+}
 
 .footer-content {
   display: flex;
@@ -213,59 +302,73 @@ footer {
   align-content: center;
   justify-content: center;
   margin-top: 65px;
-  gap: 50px; }
+  gap: 50px;
+}
 
 .logo-wrapper {
   flex-basis: 100%;
-  order: 2; }
+  order: 2;
+}
 
 .resources-list {
-  order: 1; }
+  order: 1;
+}
 
 @media only screen and (min-width: 576px) {
-  .homepage-poster__content a {
-    border-radius: 5px; }
-  .homepage-poster__content a:hover {
-    transform: scale(1.05);
-    transition: transform .3s ease; }
-
+  .homepage-poster__content {
+    a {
+      border-radius: 5px;
+    }
+    a:hover {
+      transform: scale(1.05);
+      transition: transform .3s ease;
+    }
+  }
   .footer-content {
-    flex-direction: row; } }
+    flex-direction: row;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .homepage-poster {
     min-height: 0;
     height: 56.25vw;
-    padding-top: 0; }
-
+    padding-top: 0;
+  }
   .member-benefit-section {
     max-width: 1400px;
-    margin: 60px auto 0 auto; }
-
+    margin: 60px auto 0 auto;
+  }
   .member-experiences-section {
     max-width: 1400px;
     margin-left: auto;
-    margin-right: auto; }
-
-  .homepage-poster__content > div {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%); }
-
+    margin-right: auto;
+  }
+  .homepage-poster__content {
+    > div {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
   .header--sticky {
     position: fixed;
     background: #000;
-    transition: background .3s ease; } }
+    transition: background .3s ease;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .resources-list {
     width: 250px;
-    margin-left: 70px; }
-
+    margin-left: 70px;
+  }
   .trip-inspiration-list {
     width: 250px;
-    margin-left: 70px; }
-
+    margin-left: 70px;
+  }
   .logo-wrapper {
     order: 0;
-    flex-basis: auto; } }
-
-/*# sourceMappingURL=style.css.map */
+    flex-basis: auto;
+  }
+}
