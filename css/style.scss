@@ -39,7 +39,7 @@ body {
 }
 
 .homepage-poster {
-  background: url("./beach.jpg") no-repeat 50% 50%;
+  background: url("../img/beach.jpg") no-repeat 50% 50%;
   background-size: cover;
   min-height: 56.25vw;
   max-height: 700px;
@@ -195,7 +195,7 @@ img {
   display: block;
   width: 350px;
   height: 365px;
-  background: url("./beach_family.jpg") 50% 0;
+  background: url("../img/beach_family.jpg") 50% 0;
   background-size: cover;
   color: #FFF;
   text-decoration: none;
@@ -240,10 +240,7 @@ img {
         border-radius: 20px;
         text-align: center;
         color: #000;
-
-        > p {
-          margin: 11px 0;
-        }
+        padding: 11px 0;
       }
     }
   }

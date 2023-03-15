@@ -28,7 +28,7 @@ body {
   flex-flow: column; }
 
 .homepage-poster {
-  background: url("./beach.jpg") no-repeat 50% 50%;
+  background: url("../img/beach.jpg") no-repeat 50% 50%;
   background-size: cover;
   min-height: 56.25vw;
   max-height: 700px;
@@ -137,7 +137,7 @@ img {
   display: block;
   width: 350px;
   height: 365px;
-  background: url("./beach_family.jpg") 50% 0;
+  background: url("../img/beach_family.jpg") 50% 0;
   background-size: cover;
   color: #FFF;
   text-decoration: none;
@@ -172,9 +172,8 @@ img {
       width: 72px;
       border-radius: 20px;
       text-align: center;
-      color: #000; }
-      .member-experiences-section__card h4 + span > p {
-        margin: 11px 0; }
+      color: #000;
+      padding: 11px 0; }
 
 .member-benefit-section__card-list {
   display: flex;
