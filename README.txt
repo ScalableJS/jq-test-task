@@ -1,4 +1,12 @@
-Reference the file "concept.jpg".  This is what index.html should look like when completed and viewed in browser.  
+# Web Developer Test
+
+![Mobile](./screenshots/mobile.jpeg)
+
+
+![Desktop](./screenshots/desktop.png)
+
+### Task description
+Reference the file "concept.jpg".  This is what index.html should look like when completed and viewed in browser.
 
 All assets are included in this main directory. Blank CSS file and .js files are also included.  Simply work the design by manipulating the HTML as needed to include any Classes/ID's you need to finish the task.
 
